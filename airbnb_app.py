@@ -87,9 +87,9 @@ def priced(df):
 
 
 #[AI_REWRITE] REVISE / REWRITE – loop average with each step commented
-#[MANUAL_CALC] – I compute the mean by hand and compare it to pandas .mean()
-# My first version of this was one line (sum(prices)/len(prices)) and it
-# crashed on an empty list. I asked Claude to review it and rewrote it so each
+#[MANUAL_CALC] REVISE / REWRITE – I compute the mean by hand and compare it to pandas .mean()
+# The version AI gave me was one line (sum(values) / len(values)) and it
+# crashed on an empty list. I rewrote it myself as a loop so each
 # step is its own commented line and the empty case returns 0.
 # Example: [100, 200, 300] -> total 600, count 3, average 200.0
 def loop_average(values):
@@ -103,7 +103,7 @@ def loop_average(values):
     return total / count
 
 
-#[LOOP_VS_PANDAS] count listings per neighborhood two ways and check they match
+#[LOOP_VS_PANDAS] AUGMENT – count listings per neighborhood two ways and check they match
 # First I count with a plain loop and a dictionary (the way we learned in
 # class), then with value_counts(). If the two don't match I print a note to
 # the console so I know I did the loop wrong.
