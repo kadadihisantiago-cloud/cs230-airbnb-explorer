@@ -2,7 +2,7 @@
 Name: Santiago Kadadihi
 CS230-7 (online, Prof. Frydenberg)
 Data: Inside Airbnb Cambridge MA listings (Sept 2026)
-App URL: (to be added after publishing)
+App URL: https://kadadihisantiago-cloud-cs230-airbnb-explorer-airbnb-app-r38ufq.streamlit.app
 
 Description: This app is for someone visiting Bentley, Harvard or MIT for a
 short stay who wants to find a fairly priced Airbnb in a good Cambridge
