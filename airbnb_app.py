@@ -176,10 +176,10 @@ def make_map(df, zoom=12):
     # pydeck map, color comes from the ROOM_INFO dictionary and radius from price
     d = df.copy()
     d["color"] = [ROOM_INFO.get(r, {"color": [120, 120, 120]})["color"] for r in d["room_type"]]
-    d["radius"] = [cap_price(p) / 4 + 20 for p in d["price"]]
+    d["radius"] = [cap_price(p) / 10 + 8 for p in d["price"]]
     d["price_txt"] = d["price"].apply(lambda p: "no price listed" if pd.isna(p) else f"${p:,.0f}")
     layer = pdk.Layer("ScatterplotLayer", data=d, get_position="[longitude, latitude]",
-                      get_fill_color="color", get_radius="radius", pickable=True, opacity=0.6)
+                      get_fill_color="color", get_radius="radius", pickable=True, opacity=0.5)
     tip = {"html": "<b>{name}</b><br>{neighbourhood}<br>{price_txt} per night<br>{room_type}",
            "style": {"backgroundColor": "#2a5d8f", "color": "white"}}
     view = pdk.ViewState(latitude=CAMB_LAT, longitude=CAMB_LON, zoom=zoom)
